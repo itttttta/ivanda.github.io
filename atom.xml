@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-28T00:40:50.000Z</updated>
+  <updated>2015-08-29T08:16:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关于Andriod]]></title>
+    <link href="http://yoursite.com/2015/08/29/%E5%85%B3%E4%BA%8EAndriod/"/>
+    <id>http://yoursite.com/2015/08/29/关于Andriod/</id>
+    <published>2015-08-29T08:12:20.000Z</published>
+    <updated>2015-08-29T08:16:13.000Z</updated>
+    <content type="html"><![CDATA[<p>最近这几天在看andriod的视频 ，作为一名ios开发者看andriod也许不是一个明智的选择。但是不知道为什么最近写程序，老是觉得ios是封闭的，写起来很不爽。而且最近也看完了&lt;从0到1&gt;这本书还是有点感触的，作为一个屌丝来说，确实需要做好abz计划，也许andriod是我的b计划，只能对自己说：加油！！！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近这几天在看andriod的视频 ，作为一名ios开发者看andriod也许不是一个明智的选择。但是不知道为什么最近写程序，老是觉得ios是封闭的，写起来很不爽。而且最近也看完了&lt;从0到1&gt;这本书还是有点感触的，作为一个屌丝来说，确实需要做好abz计划，也许a]]>
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[ARC下内存释放]]></title>
