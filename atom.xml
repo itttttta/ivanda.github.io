@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-08-29T08:16:13.000Z</updated>
+  <updated>2015-09-18T11:15:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[IOS9系统适配问题]]></title>
+    <link href="http://yoursite.com/2015/09/18/IOS9%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2015/09/18/IOS9适配问题/</id>
+    <published>2015-09-18T11:06:03.000Z</published>
+    <updated>2015-09-18T11:15:57.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
+</strong></p>
+<p>##问题1 关于编译报错bitcode<br>You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target. for architecture arm64</p>
+<p>要么让第三方库支持，要么关闭target的bitcode选项。</p>
+<p><strong>实际上在Xcode 7中，我们新建一个iOS程序时，bitcode选项默认是设置为YES的。我们可以在”Build Settings”-&gt;”Enable Bitcode”选项中看到这个设置。</strong></p>
+<p>不过，我们现在需要考虑的是三个平台：iOS，Mac OS，watchOS。</p>
+<p>对应iOS，bitcode是可选的。<br>对于watchOS，bitcode是必须的。<br>Mac OS不支持bitcode。</p>
+<p>解决方法:在设置中关了关闭bitcode即可</p>
+<p>##问题2 关于ios应用跳转问题<br>ios9 支付宝不能跳转<br><a href="http://dev.umeng.com/social/ios/ios9#2" target="_blank" rel="external">http://dev.umeng.com/social/ios/ios9#2</a><br>友盟已经做了很详细的解释 不多说什么 支付宝对应的是alipay 参照微信的写法即可</p>
+<p>##问题3 http请求问题<br>app中加上这句话</p>
+<pre><code><span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+<span class="tag">&lt;<span class="title">dict</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAllowsArbitraryLoads<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+<span class="tag">&lt;/<span class="title">dict</span>&gt;</span>
+
+如果实用的是https 不用关注
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
+</strong></p>
+<p>##问题1 关于编译报错bitcode<br>You must rebuild it with bitcode enabled (]]>
+    </summary>
+    
+      <category term="IOS" scheme="http://yoursite.com/tags/IOS/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[关于Andriod]]></title>
