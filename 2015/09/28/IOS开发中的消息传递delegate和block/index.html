@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="IOS," />
+  <meta name="keywords" content="block," />
 
 
 
@@ -39,22 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
-
-##问题1 关于编译报错bitcodeYou must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcod">
+<meta name="description" content="最近自己主导的项目已经趋于收尾阶段,自己也在不断的总结这半年来的痛苦与收获。这两天思考了一个问题就是delegate与block。我曾经有一段时间很少使用delegate 几乎都是blocks或者通知,因为afn中就很少出现delegate 所以 我就想 现在既然不怎么理解 那就模仿大神的写法去写呗。今天在cocoachina上读到一篇很不错的文章现在转载出来 可以参考一下。还有我经常在项目中使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IOS9系统适配问题">
-<meta property="og:url" content="http://yoursite.com/2015/09/18/IOS9适配问题/index.html">
+<meta property="og:title" content="IOS开发中的消息传递delegate和block">
+<meta property="og:url" content="http://yoursite.com/2015/09/28/IOS开发中的消息传递delegate和block/index.html">
 <meta property="og:site_name" content="ivanda的博客">
-<meta property="og:description" content="前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
-
-##问题1 关于编译报错bitcodeYou must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcod">
-<meta property="og:updated_time" content="2015-09-28T02:35:02.000Z">
+<meta property="og:description" content="最近自己主导的项目已经趋于收尾阶段,自己也在不断的总结这半年来的痛苦与收获。这两天思考了一个问题就是delegate与block。我曾经有一段时间很少使用delegate 几乎都是blocks或者通知,因为afn中就很少出现delegate 所以 我就想 现在既然不怎么理解 那就模仿大神的写法去写呗。今天在cocoachina上读到一篇很不错的文章现在转载出来 可以参考一下。还有我经常在项目中使用">
+<meta property="og:updated_time" content="2015-09-28T03:22:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IOS9系统适配问题">
-<meta name="twitter:description" content="前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
-
-##问题1 关于编译报错bitcodeYou must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcod">
+<meta name="twitter:title" content="IOS开发中的消息传递delegate和block">
+<meta name="twitter:description" content="最近自己主导的项目已经趋于收尾阶段,自己也在不断的总结这半年来的痛苦与收获。这两天思考了一个问题就是delegate与block。我曾经有一段时间很少使用delegate 几乎都是blocks或者通知,因为afn中就很少出现delegate 所以 我就想 现在既然不怎么理解 那就模仿大神的写法去写呗。今天在cocoachina上读到一篇很不错的文章现在转载出来 可以参考一下。还有我经常在项目中使用">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +58,7 @@
   };
 </script>
 
-  <title> IOS9系统适配问题 | ivanda的博客 </title>
+  <title> IOS开发中的消息传递delegate和block | ivanda的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +157,7 @@
           
           
             
-              IOS9系统适配问题
+              IOS开发中的消息传递delegate和block
             
           
         </h1>
@@ -172,8 +166,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-18T19:06:03+08:00" content="2015-09-18">
-            2015-09-18
+          <time itemprop="dateCreated" datetime="2015-09-28T11:12:33+08:00" content="2015-09-28">
+            2015-09-28
           </time>
         </span>
 
@@ -183,8 +177,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/09/18/IOS9适配问题/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/18/IOS9适配问题/" itemprop="commentsCount"></span>
+            <a href="/2015/09/28/IOS开发中的消息传递delegate和block/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/28/IOS开发中的消息传递delegate和block/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -198,24 +192,10 @@
       
 
       
-        <span itemprop="articleBody"><p><strong>前天苹果发布了ios9的推送 小编第一时间更新了系统和xcode7 现在将遇到的问题总结一下
-</strong></p>
-<p>##<font color="green">问题1 关于编译报错bitcode</font><br>You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target. for architecture arm64</p>
-<p>要么让第三方库支持，要么关闭target的bitcode选项。</p>
-<p><strong>实际上在Xcode 7中，我们新建一个iOS程序时，bitcode选项默认是设置为YES的。我们可以在”Build Settings”-&gt;”Enable Bitcode”选项中看到这个设置。</strong></p>
-<p>不过，我们现在需要考虑的是三个平台：iOS，Mac OS，watchOS。</p>
-<p>对应iOS，bitcode是可选的。<br>对于watchOS，bitcode是必须的。<br>Mac OS不支持bitcode。</p>
-<p>解决方法:在设置中关了关闭bitcode即可</p>
-<p>##<font color="green">问题2 关于ios应用跳转问题</font><br>ios9 支付宝不能跳转<br><a href="http://dev.umeng.com/social/ios/ios9#2" target="_blank" rel="external">http://dev.umeng.com/social/ios/ios9#2</a><br>友盟已经做了很详细的解释 不多说什么 支付宝对应的是alipay 参照微信的写法即可</p>
-<p>##<font color="green">问题3 http请求问题</font><br>app中加上这句话</p>
-<pre><code><span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-<span class="tag">&lt;<span class="title">dict</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAllowsArbitraryLoads<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
-<span class="tag">&lt;/<span class="title">dict</span>&gt;</span>
-
-如果实用的是https 不用关注
-</code></pre></span>
+        <span itemprop="articleBody"><p>最近自己主导的项目已经趋于收尾阶段,自己也在不断的总结这半年来的痛苦与收获。这两天思考了一个问题就是delegate与block。我曾经有一段时间很少使用delegate 几乎都是blocks或者通知,因为afn中就很少出现delegate 所以 我就想 现在既然不怎么理解 那就模仿大神的写法去写呗。今天在cocoachina上读到一篇很不错的文章现在转载出来 可以参考一下。还有我经常在项目中使用block是因为 delegate会使得代码看起来很乱，而blocks会显得简洁一点 我曾经也看过一个比较牛逼的开源客户端 都是block为主 这样确实增强了程序的可读性。 </p>
+<hr>
+<p>原文连接：<a href="http://www.cocoachina.com/ios/20150927/13525.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20150927/13525.html</a></p>
+</span>
       
     </div>
 
@@ -223,7 +203,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/IOS/" rel="tag">#IOS</a>
+            <a href="/tags/block/" rel="tag">#block</a>
           
         </div>
       
@@ -232,13 +212,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/28/IOS二维码扫描/" rel="prev">IOS二维码扫描</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/29/关于Andriod/" rel="next">关于Andriod</a>
+              <a href="/2015/09/28/iphone设备照片拍摄横转/" rel="next">iphone设备照片拍摄横转</a>
             
           </div>
         </div>
@@ -411,9 +389,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ivanda';
-      var disqus_identifier = '2015/09/18/IOS9适配问题/';
-      var disqus_title = 'IOS9系统适配问题';
-      var disqus_url = 'http://yoursite.com/2015/09/18/IOS9适配问题/';
+      var disqus_identifier = '2015/09/28/IOS开发中的消息传递delegate和block/';
+      var disqus_title = 'IOS开发中的消息传递delegate和block';
+      var disqus_url = 'http://yoursite.com/2015/09/28/IOS开发中的消息传递delegate和block/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
