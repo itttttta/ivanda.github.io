@@ -39,16 +39,55 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="1234567891011121314151617181920212223242526272829303132#import &quot;AppDelegate.h&quot;@interface AppDelegate ()@end@implementation AppDelegate/** *  开始摇晃就会调用 */- (void)motionBegan:(UIEventSubtype)motion withE">
+<meta name="description" content="#import &quot;AppDelegate.h&quot;
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+/**
+ *  开始摇晃就会调用
+ */
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@&quot;%s&quot;, __f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IOS-摇一摇">
 <meta property="og:url" content="http://yoursite.com/2015/08/24/IOS-摇一摇/index.html">
 <meta property="og:site_name" content="ivanda的博客">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132#import &quot;AppDelegate.h&quot;@interface AppDelegate ()@end@implementation AppDelegate/** *  开始摇晃就会调用 */- (void)motionBegan:(UIEventSubtype)motion withE">
-<meta property="og:updated_time" content="2015-08-27T10:04:49.000Z">
+<meta property="og:description" content="#import &quot;AppDelegate.h&quot;
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+/**
+ *  开始摇晃就会调用
+ */
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@&quot;%s&quot;, __f">
+<meta property="og:updated_time" content="2015-09-28T02:30:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS-摇一摇">
-<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132#import &quot;AppDelegate.h&quot;@interface AppDelegate ()@end@implementation AppDelegate/** *  开始摇晃就会调用 */- (void)motionBegan:(UIEventSubtype)motion withE">
+<meta name="twitter:description" content="#import &quot;AppDelegate.h&quot;
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+/**
+ *  开始摇晃就会调用
+ */
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@&quot;%s&quot;, __f">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -192,8 +231,38 @@
       
 
       
-        <span itemprop="articleBody"><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="preprocessor">#import <span class="title">"AppDelegate.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> *  开始摇晃就会调用</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)motionBegan:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> *  摇晃结束就会调用</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)motionEnded:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">     <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> *  摇晃被打断就会调用</span><br><span class="line"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)motionCancelled:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event</span><br><span class="line">&#123;</span><br><span class="line">     <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-</span>
+        <span itemprop="articleBody"><pre><code><span class="preprocessor">#import <span class="title">"AppDelegate.h"</span></span>
+
+<span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span>
+
+<span class="keyword">@end</span>
+
+<span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span>
+
+<span class="comment">/**
+ *  开始摇晃就会调用
+ */</span>
+- (<span class="keyword">void</span>)motionBegan:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event
+{
+    <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);
+}
+<span class="comment">/**
+ *  摇晃结束就会调用
+ */</span>
+- (<span class="keyword">void</span>)motionEnded:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event
+{
+     <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);
+}
+<span class="comment">/**
+ *  摇晃被打断就会调用
+ */</span>
+- (<span class="keyword">void</span>)motionCancelled:(<span class="built_in">UIEventSubtype</span>)motion withEvent:(<span class="built_in">UIEvent</span> *)event
+{
+     <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);
+}
+
+<span class="keyword">@end</span>
+</code></pre></span>
       
     </div>
 
