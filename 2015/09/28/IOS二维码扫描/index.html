@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="NSRunLoop," />
+  <meta name="keywords" content="二维码扫描," />
 
 
 
@@ -39,19 +39,43 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
+<meta name="description" content="二维码扫描 本人用的是zxing第三方库 关于zxing 请自行百度
+使用教程 通过cocoapod 加入zixng
+platform :ios, &apos;7.0&apos;
+pod &apos;ZXingObjC&apos;, &apos;~&amp;gt; 3.0&apos;
+相机拍摄关键代码
+#pragma mark
+#pragma mark ViewInit
+- (ZXCapture *)capture
+{
+    if(!_capture)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="改变nstimer的runloopmode">
-<meta property="og:url" content="http://yoursite.com/2015/08/21/改变nstimer的runloopmode/index.html">
+<meta property="og:title" content="IOS二维码扫描">
+<meta property="og:url" content="http://yoursite.com/2015/09/28/IOS二维码扫描/index.html">
 <meta property="og:site_name" content="ivanda的博客">
-<meta property="og:description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
-<meta property="og:updated_time" content="2015-08-27T10:04:49.000Z">
+<meta property="og:description" content="二维码扫描 本人用的是zxing第三方库 关于zxing 请自行百度
+使用教程 通过cocoapod 加入zixng
+platform :ios, &apos;7.0&apos;
+pod &apos;ZXingObjC&apos;, &apos;~&amp;gt; 3.0&apos;
+相机拍摄关键代码
+#pragma mark
+#pragma mark ViewInit
+- (ZXCapture *)capture
+{
+    if(!_capture)">
+<meta property="og:updated_time" content="2015-09-28T02:52:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="改变nstimer的runloopmode">
-<meta name="twitter:description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
+<meta name="twitter:title" content="IOS二维码扫描">
+<meta name="twitter:description" content="二维码扫描 本人用的是zxing第三方库 关于zxing 请自行百度
+使用教程 通过cocoapod 加入zixng
+platform :ios, &apos;7.0&apos;
+pod &apos;ZXingObjC&apos;, &apos;~&amp;gt; 3.0&apos;
+相机拍摄关键代码
+#pragma mark
+#pragma mark ViewInit
+- (ZXCapture *)capture
+{
+    if(!_capture)">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +85,7 @@
   };
 </script>
 
-  <title> 改变nstimer的runloopmode | ivanda的博客 </title>
+  <title> IOS二维码扫描 | ivanda的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,7 +184,7 @@
           
           
             
-              改变nstimer的runloopmode
+              IOS二维码扫描
             
           
         </h1>
@@ -169,34 +193,19 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-21T17:41:03+08:00" content="2015-08-21">
-            2015-08-21
+          <time itemprop="dateCreated" datetime="2015-09-28T10:39:19+08:00" content="2015-09-28">
+            2015-09-28
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NSRunLoop/" itemprop="url" rel="index">
-                  <span itemprop="name">NSRunLoop</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/08/21/改变nstimer的runloopmode/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/21/改变nstimer的runloopmode/" itemprop="commentsCount"></span>
+            <a href="/2015/09/28/IOS二维码扫描/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/28/IOS二维码扫描/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -210,9 +219,154 @@
       
 
       
-        <span itemprop="articleBody"><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSRunLoop</span> *rp  = [<span class="built_in">NSRunLoop</span> currentRunLoop];</span><br><span class="line">[rp addTimer:<span class="keyword">self</span><span class="variable">.topAdView</span><span class="variable">.timer</span> forMode:<span class="built_in">NSRunLoopCommonModes</span>];</span><br></pre></td></tr></table></figure>
-<p>改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用</p>
-</span>
+        <span itemprop="articleBody"><p>二维码扫描 本人用的是zxing第三方库 关于zxing 请自行百度</p>
+<p>使用教程 通过cocoapod 加入zixng</p>
+<pre><code><span class="rule"><span class="attribute">platform </span>:<span class="value">ios, <span class="string">'7.0'</span>
+pod <span class="string">'ZXingObjC'</span>, <span class="string">'~&gt; 3.0'</span></span></span>
+</code></pre><p><strong>相机拍摄关键代码</strong></p>
+<pre><code><span class="preprocessor">#pragma mark</span>
+<span class="preprocessor">#pragma mark ViewInit</span>
+- (ZXCapture *)capture
+{
+    <span class="keyword">if</span>(!_capture)
+    {
+        <span class="keyword">self</span><span class="variable">.capture</span> = [[ZXCapture alloc] init];
+        <span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.camera</span> = <span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.back</span>;
+        <span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.focusMode</span> = <span class="built_in">AVCaptureFocusModeContinuousAutoFocus</span>;
+        <span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.rotation</span> = <span class="number">90.0</span>f;
+        <span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.layer</span><span class="variable">.frame</span> = <span class="keyword">self</span><span class="variable">.view</span><span class="variable">.bounds</span>;
+        [<span class="keyword">self</span><span class="variable">.view</span><span class="variable">.layer</span> addSublayer:<span class="keyword">self</span><span class="variable">.capture</span><span class="variable">.layer</span>];
+    }
+    <span class="keyword">return</span> _capture;
+}
+</code></pre><p>pragma mark - Private Methods</p>
+<pre><code>- (NSString *)<span class="string">barcodeFormatToString:</span>(ZXBarcodeFormat)format {
+    <span class="keyword">switch</span> (format) {
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatAztec:</span>
+            <span class="keyword">return</span> @<span class="string">"Aztec"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatCodabar:</span>
+            <span class="keyword">return</span> @<span class="string">"CODABAR"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatCode39:</span>
+            <span class="keyword">return</span> @<span class="string">"Code 39"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatCode93:</span>
+            <span class="keyword">return</span> @<span class="string">"Code 93"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatCode128:</span>
+            <span class="keyword">return</span> @<span class="string">"Code 128"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatDataMatrix:</span>
+            <span class="keyword">return</span> @<span class="string">"Data Matrix"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatEan8:</span>
+            <span class="keyword">return</span> @<span class="string">"EAN-8"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatEan13:</span>
+            <span class="keyword">return</span> @<span class="string">"EAN-13"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatITF:</span>
+            <span class="keyword">return</span> @<span class="string">"ITF"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatPDF417:</span>
+            <span class="keyword">return</span> @<span class="string">"PDF417"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatQRCode:</span>
+            <span class="keyword">return</span> @<span class="string">"QR Code"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatRSS14:</span>
+            <span class="keyword">return</span> @<span class="string">"RSS 14"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatRSSExpanded:</span>
+            <span class="keyword">return</span> @<span class="string">"RSS Expanded"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatUPCA:</span>
+            <span class="keyword">return</span> @<span class="string">"UPCA"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatUPCE:</span>
+            <span class="keyword">return</span> @<span class="string">"UPCE"</span>;
+
+        <span class="keyword">case</span> <span class="string">kBarcodeFormatUPCEANExtension:</span>
+            <span class="keyword">return</span> @<span class="string">"UPC/EAN extension"</span>;
+<span class="label">
+        default:</span>
+            <span class="keyword">return</span> @<span class="string">"Unknown"</span>;
+    }
+}
+</code></pre><p>pragma mark - ZXCaptureDelegate Methods</p>
+<pre><code>- (<span class="type">void</span>)captureResult:(<span class="type">ZXCapture</span> *)capture <span class="literal">result</span>:(<span class="type">ZXResult</span> *)<span class="literal">result</span> {
+
+    <span class="keyword">if</span> ( !_stop &amp;&amp; !<span class="literal">result</span> )
+    {
+        <span class="keyword">return</span>;
+      }
+    [self <span class="type">GoVCWithKey</span>:<span class="literal">result</span>.text];
+    _stop = <span class="type">YES</span>;
+//    <span class="type">NSString</span> *display = [<span class="type">NSString</span> stringWithFormat:@<span class="string">"Scanned!\n\nFormat: %@\n\nContents:\n%@"</span>, formatString, <span class="literal">result</span>.text];
+//    <span class="type">DLog</span>(@<span class="string">"display = %@"</span>,display);
+
+    // <span class="type">Vibrate</span>
+//    <span class="type">AudioServicesPlaySystemSound</span>(kSystemSoundID_Vibrate);
+//    dispatch_after(dispatch_time(<span class="type">DISPATCH_TIME_NOW</span>, <span class="number">3</span> * <span class="type">NSEC_PER_SEC</span>), dispatch_get_main_queue(), ^{
+//        _stop = <span class="type">NO</span>;
+//    });
+}
+</code></pre><p><strong>相册扫描关键代码</strong></p>
+<pre><code><span class="comment">#pragma mark</span>
+<span class="comment">#pragma mark otherAction</span>
+- (<span class="type">void</span>)getQRCodeFromImageLibrary
+{
+    <span class="type">UIImagePickerController</span> *picker = [[<span class="type">UIImagePickerController</span> alloc] init];
+    picker.allowsEditing = <span class="type">YES</span>;
+    picker.delegate = self;
+    picker.sourceType = <span class="type">UIImagePickerControllerSourceTypePhotoLibrary</span>;
+    picker.navigationBar.barTintColor = <span class="type">KTHEME_COLOR</span>;
+    picker.navigationBar.titleTextAttributes = @{<span class="type">NSForegroundColorAttributeName</span>:<span class="type">KCOLOR_WHITE</span>,<span class="type">NSFontAttributeName</span>:<span class="type">KSYSTEM_FONT_BOLD_</span>(<span class="number">18</span>)};
+    picker.navigationBar.tintColor = <span class="type">KCOLOR_WHITE</span>;
+    [picker.navigationBar setTranslucent:<span class="type">NO</span>];
+    [self presentViewController:picker animated:<span class="type">YES</span> completion:^{}];
+}
+<span class="comment">#pragma mark - UIImagePickerControllerDelegate</span>
+- (<span class="type">void</span>)imagePickerController:(<span class="type">UIImagePickerController</span> *)picker didFinishPickingMediaWithInfo:(<span class="type">NSDictionary</span> *)info
+{
+    <span class="type">UIImage</span> *image = [info objectForKey:@<span class="string">"UIImagePickerControllerEditedImage"</span>];
+    [self dismissViewControllerAnimated:<span class="type">YES</span> completion:^{
+        [self getURLWithImage:image];
+    }
+    ];
+}
+-(<span class="type">void</span>)imagePickerControllerDidCancel:(<span class="type">UIImagePickerController</span> *)picker
+{
+    [picker dismissViewControllerAnimated:<span class="type">YES</span> completion:^() {
+        [[<span class="type">UIApplication</span> sharedApplication] setStatusBarStyle:<span class="type">UIStatusBarStyleLightContent</span> animated:<span class="type">YES</span>];
+    }];
+}
+-(<span class="type">void</span>)getURLWithImage:(<span class="type">UIImage</span> *)img{
+
+    <span class="type">UIImage</span> *loadImage= img;
+    <span class="type">CGImageRef</span> imageToDecode = loadImage.<span class="type">CGImage</span>;
+
+    <span class="type">ZXLuminanceSource</span> *source = [[<span class="type">ZXCGImageLuminanceSource</span> alloc] initWithCGImage:imageToDecode];
+    <span class="type">ZXBinaryBitmap</span> *bitmap = [<span class="type">ZXBinaryBitmap</span> binaryBitmapWithBinarizer:[<span class="type">ZXHybridBinarizer</span> binarizerWithSource:source]];
+    <span class="type">NSError</span> *error = <span class="keyword">nil</span>;
+
+    <span class="type">ZXDecodeHints</span> *hints = [<span class="type">ZXDecodeHints</span> hints];
+    <span class="type">ZXMultiFormatReader</span> *reader = [<span class="type">ZXMultiFormatReader</span> reader];
+    <span class="type">ZXResult</span> *<span class="literal">result</span> = [reader decode:bitmap
+                                hints:hints
+                                error:&amp;error];
+    <span class="keyword">if</span> (<span class="literal">result</span>) {
+        // <span class="type">The</span> coded <span class="literal">result</span> <span class="keyword">as</span> a <span class="type">string</span>. <span class="type">The</span> raw data can be accessed <span class="keyword">with</span>
+        // <span class="literal">result</span>.rawBytes <span class="keyword">and</span> <span class="literal">result</span>.length.
+        <span class="type">NSString</span> *contents = <span class="literal">result</span>.text;
+        [self <span class="type">GoVCWithKey</span>:contents];
+    } <span class="keyword">else</span> {
+        <span class="type">UIAlertView</span> *alter1 = [[<span class="type">UIAlertView</span> alloc] initWithTitle:@<span class="string">"解析失败"</span> message:<span class="keyword">nil</span> delegate:<span class="keyword">nil</span> cancelButtonTitle:@<span class="string">"确定"</span> otherButtonTitles: <span class="keyword">nil</span>];
+        [alter1 show];
+    }
+}
+</code></pre></span>
       
     </div>
 
@@ -220,7 +374,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NSRunLoop/" rel="tag">#NSRunLoop</a>
+            <a href="/tags/二维码扫描/" rel="tag">#二维码扫描</a>
           
         </div>
       
@@ -229,13 +383,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/24/蓝牙设备/" rel="prev">蓝牙设备</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/21/关于swift/" rel="next">关于swift</a>
+              <a href="/2015/09/18/IOS9适配问题/" rel="next">IOS9系统适配问题</a>
             
           </div>
         </div>
@@ -408,9 +560,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ivanda';
-      var disqus_identifier = '2015/08/21/改变nstimer的runloopmode/';
-      var disqus_title = '改变nstimer的runloopmode';
-      var disqus_url = 'http://yoursite.com/2015/08/21/改变nstimer的runloopmode/';
+      var disqus_identifier = '2015/09/28/IOS二维码扫描/';
+      var disqus_title = 'IOS二维码扫描';
+      var disqus_url = 'http://yoursite.com/2015/09/28/IOS二维码扫描/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
