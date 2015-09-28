@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="NSRunLoop," />
+  <meta name="keywords" content="拍照照片横转," />
 
 
 
@@ -39,19 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
+<meta name="description" content="参考连接:http://stackoverflow.com/questions/5427656/ios-uiimagepickercontroller-result-image-orientation-after-upload
+ios 照片横转一般存在与拍摄中,相册中的照片应该经过了特殊处理而很少出现这样的情况。我出现的现象就是 直接拍摄的照片传给后台就会出现，如果照片先保存到相册，再传给后台就不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="改变nstimer的runloopmode">
-<meta property="og:url" content="http://yoursite.com/2015/08/21/改变nstimer的runloopmode/index.html">
+<meta property="og:title" content="iphone设备照片拍摄横转">
+<meta property="og:url" content="http://yoursite.com/2015/09/28/iphone设备照片拍摄横转/index.html">
 <meta property="og:site_name" content="ivanda的博客">
-<meta property="og:description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
-<meta property="og:updated_time" content="2015-08-27T10:04:49.000Z">
+<meta property="og:description" content="参考连接:http://stackoverflow.com/questions/5427656/ios-uiimagepickercontroller-result-image-orientation-after-upload
+ios 照片横转一般存在与拍摄中,相册中的照片应该经过了特殊处理而很少出现这样的情况。我出现的现象就是 直接拍摄的照片传给后台就会出现，如果照片先保存到相册，再传给后台就不">
+<meta property="og:updated_time" content="2015-09-28T03:02:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="改变nstimer的runloopmode">
-<meta name="twitter:description" content="12NSRunLoop *rp  = [NSRunLoop currentRunLoop];[rp addTimer:self.topAdView.timer forMode:NSRunLoopCommonModes];
-改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用">
+<meta name="twitter:title" content="iphone设备照片拍摄横转">
+<meta name="twitter:description" content="参考连接:http://stackoverflow.com/questions/5427656/ios-uiimagepickercontroller-result-image-orientation-after-upload
+ios 照片横转一般存在与拍摄中,相册中的照片应该经过了特殊处理而很少出现这样的情况。我出现的现象就是 直接拍摄的照片传给后台就会出现，如果照片先保存到相册，再传给后台就不">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +61,7 @@
   };
 </script>
 
-  <title> 改变nstimer的runloopmode | ivanda的博客 </title>
+  <title> iphone设备照片拍摄横转 | ivanda的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,7 +160,7 @@
           
           
             
-              改变nstimer的runloopmode
+              iphone设备照片拍摄横转
             
           
         </h1>
@@ -169,34 +169,19 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-21T17:41:03+08:00" content="2015-08-21">
-            2015-08-21
+          <time itemprop="dateCreated" datetime="2015-09-28T10:55:44+08:00" content="2015-09-28">
+            2015-09-28
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/NSRunLoop/" itemprop="url" rel="index">
-                  <span itemprop="name">NSRunLoop</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/08/21/改变nstimer的runloopmode/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/21/改变nstimer的runloopmode/" itemprop="commentsCount"></span>
+            <a href="/2015/09/28/iphone设备照片拍摄横转/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/28/iphone设备照片拍摄横转/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -210,9 +195,102 @@
       
 
       
-        <span itemprop="articleBody"><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSRunLoop</span> *rp  = [<span class="built_in">NSRunLoop</span> currentRunLoop];</span><br><span class="line">[rp addTimer:<span class="keyword">self</span><span class="variable">.topAdView</span><span class="variable">.timer</span> forMode:<span class="built_in">NSRunLoopCommonModes</span>];</span><br></pre></td></tr></table></figure>
-<p>改变nstimer的runloop模式,防止uiscrollow滚动时影响定时器的正常使用</p>
-</span>
+        <span itemprop="articleBody"><p>参考连接:<a href="http://stackoverflow.com/questions/5427656/ios-uiimagepickercontroller-result-image-orientation-after-upload" target="_blank" rel="external">http://stackoverflow.com/questions/5427656/ios-uiimagepickercontroller-result-image-orientation-after-upload</a></p>
+<font color="green">ios 照片横转一般存在与拍摄中,相册中的照片应该经过了特殊处理而很少出现这样的情况。我出现的现象就是 直接拍摄的照片传给后台就会出现，如果照片先保存到相册，再传给后台就不会出现(ps:后台是php做的);</font>
+
+<p><strong>处理方法
+</strong></p>
+<p><strong>UIImage+fixOrientation.h
+</strong><br>    @interface UIImage (fixOrientation)</p>
+<pre><code><span class="bullet">- </span>(UIImage <span class="strong">*)fixOrientation;
+
+</span>@end
+</code></pre><p><strong>UIImage+fixOrientation.m
+</strong></p>
+<pre><code><span class="class"><span class="keyword">@implementation</span> <span class="title">UIImage</span> (<span class="title">fixOrientation</span>)</span>
+
+- (<span class="built_in">UIImage</span> *)fixOrientation {
+
+    <span class="comment">// No-op if the orientation is already correct</span>
+    <span class="keyword">if</span> (<span class="keyword">self</span><span class="variable">.imageOrientation</span> == <span class="built_in">UIImageOrientationUp</span>) <span class="keyword">return</span> <span class="keyword">self</span>;
+
+    <span class="comment">// We need to calculate the proper transformation to make the image upright.</span>
+    <span class="comment">// We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.</span>
+    <span class="built_in">CGAffineTransform</span> transform = <span class="built_in">CGAffineTransformIdentity</span>;
+
+    <span class="keyword">switch</span> (<span class="keyword">self</span><span class="variable">.imageOrientation</span>) {
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationDown</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationDownMirrored</span>:
+            transform = <span class="built_in">CGAffineTransformTranslate</span>(transform, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>);
+            transform = <span class="built_in">CGAffineTransformRotate</span>(transform, M_PI);
+            <span class="keyword">break</span>;
+
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeft</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeftMirrored</span>:
+            transform = <span class="built_in">CGAffineTransformTranslate</span>(transform, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="number">0</span>);
+            transform = <span class="built_in">CGAffineTransformRotate</span>(transform, M_PI_2);
+            <span class="keyword">break</span>;
+
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRight</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRightMirrored</span>:
+            transform = <span class="built_in">CGAffineTransformTranslate</span>(transform, <span class="number">0</span>, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>);
+            transform = <span class="built_in">CGAffineTransformRotate</span>(transform, -M_PI_2);
+            <span class="keyword">break</span>;
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationUp</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationUpMirrored</span>:
+            <span class="keyword">break</span>;
+    }
+
+    <span class="keyword">switch</span> (<span class="keyword">self</span><span class="variable">.imageOrientation</span>) {
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationUpMirrored</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationDownMirrored</span>:
+            transform = <span class="built_in">CGAffineTransformTranslate</span>(transform, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="number">0</span>);
+            transform = <span class="built_in">CGAffineTransformScale</span>(transform, -<span class="number">1</span>, <span class="number">1</span>);
+            <span class="keyword">break</span>;
+
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeftMirrored</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRightMirrored</span>:
+            transform = <span class="built_in">CGAffineTransformTranslate</span>(transform, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>, <span class="number">0</span>);
+            transform = <span class="built_in">CGAffineTransformScale</span>(transform, -<span class="number">1</span>, <span class="number">1</span>);
+            <span class="keyword">break</span>;
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationUp</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationDown</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeft</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRight</span>:
+            <span class="keyword">break</span>;
+    }
+
+    <span class="comment">// Now we draw the underlying CGImage into a new context, applying the transform</span>
+    <span class="comment">// calculated above.</span>
+    <span class="built_in">CGContextRef</span> ctx = <span class="built_in">CGBitmapContextCreate</span>(<span class="literal">NULL</span>, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>, <span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>,
+                                             <span class="built_in">CGImageGetBitsPerComponent</span>(<span class="keyword">self</span><span class="variable">.CGImage</span>), <span class="number">0</span>,
+                                             <span class="built_in">CGImageGetColorSpace</span>(<span class="keyword">self</span><span class="variable">.CGImage</span>),
+                                             <span class="built_in">CGImageGetBitmapInfo</span>(<span class="keyword">self</span><span class="variable">.CGImage</span>));
+    <span class="built_in">CGContextConcatCTM</span>(ctx, transform);
+    <span class="keyword">switch</span> (<span class="keyword">self</span><span class="variable">.imageOrientation</span>) {
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeft</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationLeftMirrored</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRight</span>:
+        <span class="keyword">case</span> <span class="built_in">UIImageOrientationRightMirrored</span>:
+            <span class="comment">// Grr...</span>
+            <span class="built_in">CGContextDrawImage</span>(ctx, <span class="built_in">CGRectMake</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>,<span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>), <span class="keyword">self</span><span class="variable">.CGImage</span>);
+            <span class="keyword">break</span>;
+
+        <span class="keyword">default</span>:
+            <span class="built_in">CGContextDrawImage</span>(ctx, <span class="built_in">CGRectMake</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">self</span><span class="variable">.size</span><span class="variable">.width</span>,<span class="keyword">self</span><span class="variable">.size</span><span class="variable">.height</span>), <span class="keyword">self</span><span class="variable">.CGImage</span>);
+            <span class="keyword">break</span>;
+    }
+
+    <span class="comment">// And now we just create a new UIImage from the drawing context</span>
+    <span class="built_in">CGImageRef</span> cgimg = <span class="built_in">CGBitmapContextCreateImage</span>(ctx);
+    <span class="built_in">UIImage</span> *img = [<span class="built_in">UIImage</span> imageWith<span class="built_in">CGImage</span>:cgimg];
+    <span class="built_in">CGContextRelease</span>(ctx);
+    <span class="built_in">CGImageRelease</span>(cgimg);
+    <span class="keyword">return</span> img;
+}
+
+<span class="keyword">@end</span>
+</code></pre></span>
       
     </div>
 
@@ -220,7 +298,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NSRunLoop/" rel="tag">#NSRunLoop</a>
+            <a href="/tags/拍照照片横转/" rel="tag">#拍照照片横转</a>
           
         </div>
       
@@ -229,13 +307,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/24/蓝牙设备/" rel="prev">蓝牙设备</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/21/关于swift/" rel="next">关于swift</a>
+              <a href="/2015/09/28/IOS二维码扫描/" rel="next">IOS二维码扫描</a>
             
           </div>
         </div>
@@ -408,9 +484,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'ivanda';
-      var disqus_identifier = '2015/08/21/改变nstimer的runloopmode/';
-      var disqus_title = '改变nstimer的runloopmode';
-      var disqus_url = 'http://yoursite.com/2015/08/21/改变nstimer的runloopmode/';
+      var disqus_identifier = '2015/09/28/iphone设备照片拍摄横转/';
+      var disqus_title = 'iphone设备照片拍摄横转';
+      var disqus_url = 'http://yoursite.com/2015/09/28/iphone设备照片拍摄横转/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
